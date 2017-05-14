@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <title>math.Box</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="colors.css"/>
+    <link rel="stylesheet" type="text/css" href="fontes.css"/>
+    <link rel="stylesheet" type="text/css" href="animate.css"/>
+    <link rel="stylesheet" type="text/css" href="math.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    
+    <!-- Cor e fontes padroes -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Stint+Ultra+Expanded" rel="stylesheet">
+    
+    <! -- Javascript -- >
+    <script type="text/javascript" language="javascript" src="joken.js"></script>
+    <script type="text/javascript" language="javascript" src="acoes.js"></script>
+    <script type="text/javascript" language="javascript" src="rand.js"></script>
+    <script type="text/javascript" language="javascript" src="math.js"></script>
+    <script type="text/javascript" language="javascript" src="palavras.js"></script>
+    <script type="text/javascript" language="javascript" src="usuario.js"></script>
+    <script type="text/javascript" language="javascript" src="lore.js"></script>
+    
+    <!-- Scripts Calculadora -->
+    <script type="text/javascript" language="javascript" src="calculo.js"></script>
+    <script type="text/javascript" language="javascript" src="baskara.js"></script>
+    <script type="text/javascript" language="javascript" src="matrizes.js"></script>
+    
+</head>
+<body>
+    
+    <input type="radio" name="god" id="inversion" style="display:none;">
+    <div class="main">
+        
+        <!-- Botoes -->
+        <input type="radio" name="btn-menu" id="btn-lore">
+        <input type="radio" name="btn-menu" id="btn-math">
+        <input type="radio" name="btn-menu" id="btn-docs">
+        <input type="radio" name="btn-menu" id="btn-sair">
+        
+        
+          <!-- Cores -->
+          <input type="radio" name="color" id="bg-btn-padrao" checked> <!-- cor padrao de background dos botoes-->
+          <input type="radio" name="color" id="bg-btn-dark">
+          <input type="radio" name="color" id="bg-btn-pink">
+          
+          <!-- Fontes -->
+          <input type="radio" name="fontes" id="fonte-padrao" checked> 
+          <input type="radio" name="fontes" id="fonte-dark"> 
+          <input type="radio" name="fontes" id="fonte-pink"> 
+    
+        <div class="painel topo"> 
+           <h1 class="logo" id="id-logo">Math.Box</h1>
+        </div>
+         
+        <nav class="painel menu">
+            <div class="botoes btn-one"><h1><label for="btn-lore">Lore</label></h1></div>
+            <div class="botoes btn-two"><h1><label for="btn-math">Math</label></h1></div>
+            <div class="botoes btn-three"><h1><label for="btn-docs" onclick="documentation()">Docs</label></h1></div>
+            
+            
+            <!-- Background colors Buttons-->
+            <div class="bg-btn-color bg-btn-one"></div>
+            <div class="bg-btn-color bg-btn-two"></div>
+            <div class="bg-btn-color bg-btn-three"></div>
+        </nav>
+        
+         <!-- Background Buttons -->
+      
+        
+        <div class="painel baixo">
+            <input type="text" name="nome" id="id-nome" maxlength="20" placeholder="Digite seu nome" onkeydown="if(event.keyCode == 13) document.getElementById('btn-nome').click()">
+            <input type="button" id="btn-nome" onclick="usuario()">
+            
+            <footer class="animacoes">
+             <p>
+                 <a href="https://fabricadealgoritmos.github.io">fabricadealgoritmos@gmail.com</a><br/>
+                 <a href="https://daneden.github.io/animate.css/" target="_blank">Animate.css</a>
+            </p>
+            </footer>
+        </div>
+        
+        <!-- Efeitos -->
+        <input type="checkbox" name="rubberBand" id="id-rubberBand">
+        <input type="checkbox" name="bounce" id="id-bounce">
+        
+        <div class="terminal">
+          <section class="lore animated">
+             <label for="comandos" class="lbl-comando">Digite o comando</label><br/>
+             <input type="text" name="comandos" id="comandos" maxlength="100" placeholder="command line" onkeydown="if(event.keyCode == 13) document.getElementById('pergunta').click()"> 
+             <input type="button" id="pergunta" onclick="responda()">
+              
+              <div class="lore-body">
+                 <div class="lore-heart" id="resposta">
+                    Hello! My name is Lore...
+                  </div>
+                 
+              </div>
+            </section>
+        </div> <!--fim terminal lore-->
+        
+        <div class="calculadora">
+            
+            <section class="maquina">
+                <label for="btn-sair" class="fechar"><i class="material-icons">&#xE882;</i></label>
+                
+                <input type="radio" name="mat" id="mat-padrao" checked>
+                <input type="radio" name="mat" id="mat-bask">
+                <input type="radio" name="mat" id="mat-matriz">
+                
+        
+                    <label for="mat-padrao" class="opcoes lbl-pad" onclick="result_limpa()">padrao</label>
+                    <label for="mat-bask" class="opcoes lbl-bask" onclick="result_limpa()">baskara</label>
+                    <label for="mat-matriz" class="opcoes lbl-matriz" onclick="msg()">matriz</label>
+                
+                <div class="operacoes">
+                    <input type="radio" name="operators" id="id-add" checked>
+                    <input type="radio" name="operators" id="id-sub">
+                    <input type="radio" name="operators" id="id-mult">
+                    <input type="radio" name="operators" id="id-div"> 
+                    
+
+                    <section class="operadores">
+                       <ul>
+                           <li class="li-add animated"><label for="id-add">Adição</label></li>
+                           <li class="li-sub animated"><label for="id-sub">Subtração</label></li>
+                           <li class="li-mult animated"><label for="id-mult">Multiplicação</label></li>
+                           <li class="li-div animated"><label for="id-div">Divisão</label></li>
+                        </ul>
+                    </section>
+                    
+                    <section class="calculos calc-padrao">
+                        <label for="num-pad">Padrao</label><br>
+                        <input type="text" maxlength="128" id="num-pad" name="first" placeholder="{valor1,valor2}" 
+                               onkeydown="if(event.keyCode == 13) document.getElementById('btn-calc').click()">
+                        
+                    </section>
+                    
+                    <section class="calculos calc-baskara">
+                        <label for="num-bask">baskara</label><br>
+                        <input type="text" maxlength="128" id="num-bask" name="first" placeholder="{a,b,c}"
+                               onkeydown="if(event.keyCode == 13) document.getElementById('btn-calc').click()">
+                    </section>
+                    
+                    <section class="calculos calc-matriz">
+                        <label for="a-matriz">matriz</label><br>
+                        <input type="text" maxlength="128" id="a-matriz" name="first" placeholder="Matriz A">
+                        <br>
+                        <br>
+                        <input type="text" maxlength="128" id="b-matriz" name="second" placeholder="Matriz B"
+                               onkeydown="if(event.keyCode == 13) document.getElementById('btn-calc').click()">
+                    </section>
+                    
+                    <section class="resultado">
+                       <h1 id="resultado">Resultado</h1>
+                    </section>
+                
+                    <input type="button" id="btn-calc" onclick="calcula()">
+                </div><!--fim operacoes-->
+                
+                
+            </section>
+            <input type="checkbox" name="help" id="help">
+            <label for="help" class="lbl-help">Help</label>
+            <aside class="help">
+                <label for="help">voltar</label>
+                <ul>
+                    <li><h1>Padrao</h1></li>
+                    <li>Os valores devem ser colocados dentro das chaves.</li>
+                    <li>O resultado será de acordo com a operação escolhida.</li>
+                    <li>A operação será feita a partir do primeiro valor. </li>
+                    <li>Soma Ex: {1,2} = {3}</li>
+                    <li>Subtração Ex: {1,2} = {-1}</li>
+                    <li>Multiplicação Ex: {3,2} = {6}</li>
+                    <li>Divisao Ex: {1,2} = {0,5}</li>
+                </ul>
+                
+                <ul>
+                  <li><h1>Baskara</h1></li>
+                  <li>Coloque os valores de a, b, c. Ex: {2, -4, 0}</li>
+                  <li>a = 2, b = -4, c = 0</li>
+                </ul>
+                
+                <ul>
+                  <li><h1>Matriz</h1></li>
+                    <li>Os valores devem ser colocalos em blocos de linhas e as colunas separadas por virgula.</li>
+                    <li>Ex: {1,0}{0,1};</li>
+                    <li>No exemplo é uma matriz de 2 linhas e 2 colunas.</li>
+                    <li>É necessário o ponto e virugla(;) para finalizar o ultimo bloco/linha da matriz.</li>
+                    <li>Matriz A e B precisam ter o mesmo numero de linhas e colunas.</li>
+                </ul>
+        
+            </aside>
+        </div><!--Fim Div calculadora -->
+    
+    </div>
+    
+    
+</body>
+</html>

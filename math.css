@@ -1,0 +1,335 @@
+.calculadora {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    top: -200%;
+    left: 0;
+    transform: .5s;
+    transition: .5s ease;
+    z-index: 999;
+}
+
+input[id="btn-math"]:checked ~ .calculadora {
+    top: 0;
+}
+
+input[id="bg-btn-padrao"]:checked ~ .calculadora .maquina {
+    font-family: 'Stint Ultra Expanded', cursive;
+    border: 4px solid #00e6ac;
+    background: #fff;
+}
+
+input[id="bg-btn-dark"]:checked ~ .calculadora .maquina {
+    font-family: 'Fdark';
+    border: 4px solid silver;
+    color: silver;
+    background: #fff;
+}
+
+input[id="bg-btn-dark"]:checked ~ .calculadora {
+    background: #000;
+}
+
+input[id="bg-btn-pink"]:checked ~ .calculadora .maquina {
+    font-family: 'Fpink';
+    border: 4px solid #ff99ff;
+    box-shadow: 3px 3px 0 #ff99ff; 
+}
+
+.calculadora .fechar {
+    position: absolute;
+    right: 0;
+    padding: 5px;
+    color: #404040;
+    cursor: pointer;
+}
+
+.maquina {
+    position: absolute;
+    width: 70vw;
+    height: 90vh;
+    left: 15%;
+    top: 5%;
+    border-radius: 5px;
+}
+
+@media(max-width:480px){
+    .maquina {
+        width: 90vw;
+        height: 90%;
+        left: 3.5%;
+    }
+}
+
+/* Operacoes */
+
+.operacoes {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    top: 10%;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+
+input[name="mat"]{display: none;}
+
+.opcoes {
+    font-size: .9em;
+    float: left;
+    padding: 10px;
+    color: #303030;
+    cursor: pointer;
+}
+
+input[id="mat-padrao"]:checked ~ .lbl-pad{
+    border-bottom: 2px solid red;
+}
+
+input[id="mat-bask"]:checked ~ .lbl-bask{
+    border-bottom: 2px solid red;
+}
+
+input[id="mat-matriz"]:checked ~ .lbl-matriz{
+    border-bottom: 2px solid red;
+}
+
+@media(max-width: 480px){
+    .opcoes{
+        padding: 5px;
+        font-size: .7em;
+    }
+}
+
+/* Operadores */
+.operadores {
+    position: absolute;
+    width: 100%;
+    height: 8%;
+    background-color: #303030;
+    left: 0;
+    top: 0;
+    color: #fff;
+}
+
+.operadores ul {
+    display: block;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.operadores ul li {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.operadores ul li:hover{
+   background: #fff;
+    color: #303030;
+      -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+.operadores ul li label{
+    cursor: pointer;
+    padding: 10px;
+}
+
+input[id="id-add"]:checked ~ .operadores ul .li-add{
+    color: #ff3333;
+}
+
+input[id="id-sub"]:checked ~ .operadores ul .li-sub{
+    color:#00ccff;
+}
+
+input[id="id-mult"]:checked ~ .operadores ul .li-mult{
+    color: #00ff00;
+}
+
+input[id="id-div"]:checked ~ .operadores ul .li-div{
+    color:#cc00cc;
+}
+
+@media(max-width:480px){
+    .operadores{
+        height: 20%;
+    }
+    
+    .operadores ul li {
+        padding: 5px;
+        font-size: 10px;
+    }
+    
+    .operadores ul li label{
+        padding: 5px;
+    }
+}
+
+/* Calculos */
+
+.calculos {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    bottom: 5%;
+    left: 100%;
+    background-color: #fff;
+    transform: .3s;
+    transition: .3s ease;
+}
+
+@media(max-width:480px){
+    .calculos {
+        bottom: 0;
+    }
+}
+
+input[id="mat-padrao"]:checked ~ .operacoes .calc-padrao{
+    left: 0;
+}
+
+
+input[id="mat-bask"]:checked ~ .operacoes .calc-baskara{
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    height: 100%;
+}
+
+.calculos input[name="first"]{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 10%;
+    height: 5%;
+    font-size: 18px;
+    padding: 5px;
+    letter-spacing: 2px;
+}
+
+
+.calculos input[name="second"]{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 25%;
+    height: 5%;
+    font-size: 18px;
+    padding: 5px;
+    letter-spacing: 2px;
+}
+
+input[id="mat-matriz"]:checked ~ .operacoes .calc-matriz{
+    left: 0;
+}
+
+input[id="mat-matriz"]:checked ~ .operacoes .li-div{
+    display: none;
+}
+
+.calculos label {
+    padding: 20px;
+    cursor: pointer;
+    font-size: .7em;
+}
+
+@media(max-width:480px){
+    .calculos input[name="first"]{
+        left: 7%;
+    }
+    
+    .calculos input[name="second"]{
+        left: 7%;
+    }
+}
+
+
+/* Resultado */
+
+.resultado {
+    position: absolute;
+    height: 45%;
+    width: 100%;
+    bottom: 0;
+    z-index: 800;
+    overflow: auto;
+}
+
+.resultado h1{
+    text-align: center;
+    color: #000;
+    padding: 0;
+    margin: 0;
+}
+
+@media(max-width:480px){
+    .resultado h1{
+        font-size: 12px;
+    }
+}
+
+/* HELP */
+
+.help {
+    border: 1px solid #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    right: 0;
+    opacity: 0;
+    background: #fff;
+    z-index: 900;
+    transform: .5s;
+    transition: .5s ease-in-out;
+    overflow: auto;
+}
+
+.lbl-help{
+    position: absolute;
+    right: 0;
+    padding: 30px;
+    color: red;
+    cursor: pointer;
+    bottom: 0;
+    font-family: 'Stint Ultra Expanded', cursive;
+}
+
+.help label{
+    float: right;
+    padding: 10px;
+    color: red;
+    cursor: pointer;
+    font-family: 'Stint Ultra Expanded', cursive;
+}
+
+input[id="help"]:checked ~ .help {
+    bottom: 0;
+    opacity: 1;
+}
+
+.help ul li h1{
+    font-family: 'calibri',sans-serif;
+    color: indianred;
+}
+
+.help ul li {
+   font-family: 'Stint Ultra Expanded', cursive;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+
+.help ul {
+    float: left;
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+input[name="help"]{display: none;}
+

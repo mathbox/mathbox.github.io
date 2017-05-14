@@ -1,0 +1,1 @@
+Criei este site com a intenção de estudar Javascript

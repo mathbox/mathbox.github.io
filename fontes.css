@@ -1,0 +1,43 @@
+input[id="fonte-padrao"]:checked ~ .menu, .baixo,.lore {
+    font-family: 'Stint Ultra Expanded', cursive;
+    font-size: 15px;
+}
+
+input[id="fonte-dark"]:checked ~ .menu, .baixo{
+    font-family: 'Fdark';
+    font-size: 10px;
+}
+
+input[id="fonte-dark"]:checked ~ .terminal .lore{
+    font-family: 'Fdark';
+    font-size: 10px;
+}
+
+input[id="fonte-pink"]:checked ~ .menu, .baixo{
+    font-family: 'Fpink';
+    font-size: 12px;
+}
+
+input[id="fonte-pink"]:checked ~ .terminal .lore{
+    font-family: 'Fpink';
+    font-size: 12px;
+}
+
+input[id="fonte-pink"]:checked ~ .calculadora {
+    font-size: 14px;
+}
+
+input[id="fonte-pink"]:checked ~ .calculadora .maquina ul li{
+    font-size: 10px;
+}
+
+input[id="fonte-dark"]:checked ~ .calculadora{
+    font-size: 10px;
+}
+
+input[id="fonte-dark"]:checked ~ .calculadora .maquina ul li{
+    font-size: 10px;
+}
+
+
+

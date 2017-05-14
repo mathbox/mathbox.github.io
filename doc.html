@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <title>Minno - Documentação</title>
+      <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #cc0000;
+            font-family: 'calibri',sans-serif;
+        }
+        
+        .main {
+            padding: 20px;
+            margin: 0 auto;
+            top: 0;
+            width: 80vw;
+            height: 100%;
+            max-height: 100%;
+            background: #fff;       
+        }
+        
+        .main h1 {
+            font-size: 30px;
+            text-align: center;
+            color: #cc0000;
+        }
+        
+        .main h2 {
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        .tabela {
+            width: 100%;
+            padding: 5px;
+            
+        }
+        
+        .tabela td{
+            font-family:'PT Sans', sans-serif;
+            padding: 5px;
+        }
+        
+        .tabela .td1 {
+            background: #ff3333;
+            color: #fff;
+        }
+        
+        .main caption {
+            padding: 10px;
+            font-family: 'Baloo', cursive;
+            color: #ff3333;
+            text-align: left;
+            border-top: 1px solid #ff3333;
+        }
+        
+        
+        
+        
+    </style>
+  
+</head>
+    <body>
+        <div class="main">
+          <h1>Lista de comandos</h1>
+            <h2>Terminal Lore</h2>
+            <table class="tabela">
+              <caption>Basicos</caption>
+                <tr><td class="td1">sair</td> <td> fecha o terminal</td></tr>
+                <tr><td class="td1">inv</td> <td>gira o terminal 180º</td></tr>
+                <tr><td class="td1">padrao l</td> <td>muda o layout do site para o visual padrao</td></tr>
+                <tr><td class="td1">dark l </td> <td>muda o layout do site</td></tr>
+                <tr><td class="td1">pink l </td> <td> muda o layout do site</td></tr>
+                <tr><td class="td1">docs</td> <td>chama a pagina de documentação (esta pagina)</td></tr>
+                <tr><td class="td1">math</td> <td>chama a calculadora</td></tr>
+                <tr><td class="td1">rubberband </td> <td>ativa o efeito rubberband porém nao funciona seguidamente</td></tr>
+                <tr><td class="td1">rubberbando -r </td> <td>reseta o efeito rubberband para ser usado novamente</td></tr>
+                <tr><td class="td1">bounce </td> <td> ativa o efeito bounce, o mesmo nao funciona seguidamente</td></tr>
+                <tr><td class="td1">bounce -r </td> <td> reseta o efeito bounce</td></tr>
+                <br/>
+            </table>
+            
+            <table class="tabela">
+            <caption>Numeros Randomicos</caption>
+                <tr><td class="td1">rand</td> <td>mostra um numero ou letra aleatoria</td></tr>
+                <tr><td class="td1">rand letra</td> <td>mostra apenas letras aleatorias</td></tr>
+                <tr><td class="td1">rand num</td> <td>mostra apenas numeros aleatorios</td></tr>
+                <tr><td class="td1">rand -n valor1 a valor2</td> <td>gera numeros aleatorios partir de um intervalo estabelecido entre o valor 1 e 2</td></tr>
+                <tr><td class="td1">rand --n</td> <td>gera numeros aleatorios com possiblidade de serem negativos</td></tr>
+                <tr><td class="td1">rand -n -m valor</td> <td>gera numeros aleatorios menores ou igual ao numero estabelecido</td></tr>
+                <tr><td class="td1">rand -n m valor</td> <td>gera numeros aleatorios maiores ou igual ao numero estabelecido</td></tr>
+            </table>
+            
+            <table class="tabela">
+            <caption>Jokenpo </caption>
+                <tr><td class="td1">pedra</td> <td>vence tesoura e perde de papel</td></tr>
+                <tr><td class="td1">papel</td> <td>vence pedra e perde de tesoura</td></tr>
+                <tr><td class="td1">tesoura</td> <td>vence papel e perde pedra</td></tr>
+            </table>    
+    
+            
+            <table class="tabela">
+            <caption>Matematica</caption>
+                <tr><td class="td1">raiz valor</td> <td>mostra a raiz do valor</td></tr>
+                <tr><td class="td1">pow valor1 a valor2</td> <td>mostra o resultado do valor1 elevado ao valor2</td></tr>
+                <tr><td class="td1">fibonacci valor</td> <td>mostra a sequencia de fibonacci limitado pelo valor</td></tr>
+                <tr><td class="td1">fatorial valor</td> <td>mostra o fatorial do valor</td></tr>
+                <tr><td class="td1">fatorial -n valor</td> <td>mostra todos os fatoriais até o valor indicado</td></tr>
+            </table>
+            
+        </div>
+    </body>
+</html>

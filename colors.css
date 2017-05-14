@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Fpink';
+    src: url('powerpuffgirlsfont.ttf');
+}
+
+@font-face {
+    font-family: 'Fdark';
+    src: url('Circular Abstracts.ttf')
+}
+
+/* Layout Padrao */
+
+input[name="color"]{display: none;}
+
+/* Background menu padrao */
+
+input[id="bg-btn-padrao"]:checked ~ .topo {
+    background-color: #fff;
+}
+
+input[id="bg-btn-padrao"]:checked ~ .menu .bg-btn-one{
+    background-color: #80ccff;
+    border-bottom: 10px solid #008ae6;
+}
+
+input[id="bg-btn-padrao"]:checked ~ .menu .botoes:hover label {
+    color: #fff;
+    text-shadow: 0 3px 6px rgba(0,0,0,1);
+}
+
+input[id="bg-btn-padrao"]:checked ~ .terminal .lore{
+     border: 4px solid #80ccff;
+}
+
+input[id="bg-btn-padrao"]:checked ~ .menu .bg-btn-two{
+    background-color: #4dff4d;
+    border-bottom: 10px solid #00cc00;
+}
+
+input[id="bg-btn-padrao"]:checked ~ .menu .bg-btn-three{
+    background-color: #ff1a1a;
+    border-bottom: 10px solid #cc0000;
+}
+
+
+input[id="bg-btn-padrao"]:checked ~ .topo .logo{
+    color: #ff704d;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/* Dark Layout */
+
+input[id="bg-btn-dark"]:checked ~ .menu .botoes label{
+    color: silver;
+}
+
+input[id="bg-btn-dark"]:checked ~ .topo{
+    background-color: #000;
+}
+
+input[id="bg-btn-dark"]:checked ~ .baixo{
+    background-color: rgba(255,255,255,0);
+}
+
+input[id="bg-btn-dark"]:checked ~ .menu .bg-btn-one{
+    background-color: #000;
+    border-bottom: 10px solid #000;
+}
+
+input[id="bg-btn-dark"]:checked ~ .menu .bg-btn-two{
+    background-color: #000;
+    border-bottom: 10px solid #000;
+}
+
+input[id="bg-btn-dark"]:checked ~ .menu .bg-btn-three{
+    background-color: #000;
+    border-bottom: 10px solid #000;
+}
+
+input[id="bg-btn-dark"]:checked ~ .menu .botoes:hover label {
+    color: silver;
+    text-shadow: 0 3px 6px rgba(255,255,255,.3);
+}
+
+input[id="bg-btn-dark"]:checked ~ .terminal .lore{
+     border: 4px solid #000;
+}
+
+
+input[id="bg-btn-dark"]:checked ~ .topo .logo{
+    color: silver;
+    font-family: 'Fdark';
+}
+
+input[id="bg-btn-dark"]:checked ~ .terminal{
+     background: rgba(255,255,255,255);
+}
+
+input[id="bg-btn-dark"]:checked ~ .terminal .lore{
+     background: #0a0f0f;
+    color: silver;
+}
+
+
+
+/* Pink Layout*/
+
+
+input[id="bg-btn-pink"]:checked ~ .menu .botoes label{
+    color: #e600e6;
+}
+
+input[id="bg-btn-pink"]:checked ~ .topo{
+    background-color: #ff99ff;
+}
+
+input[id="bg-btn-pink"]:checked ~ .baixo{
+    background-color: rgba(255,255,255,0);
+}
+
+input[id="bg-btn-pink"]:checked ~ .baixo input[id="id-nome"]:focus{
+    background: #ffe6ff;
+} 
+
+input[id="bg-btn-pink"]:checked ~ .menu .bg-btn-one{
+    background-color: #ff99ff;
+    border-bottom: 10px solid #e600e6;
+}
+
+input[id="bg-btn-pink"]:checked ~ .menu .bg-btn-two{
+    background-color: #ff99ff;
+    border-bottom: 10px solid #e600e6;
+}
+
+input[id="bg-btn-pink"]:checked ~ .menu .bg-btn-three{
+    background-color: #ff99ff;
+    border-bottom: 10px solid #e600e6;
+}
+
+input[id="bg-btn-pink"]:checked ~ .menu .botoes:hover label {
+    color: #fff;
+}
+
+input[id="bg-btn-pink"]:checked ~ .terminal .lore{
+     border: 4px solid  #e600e6;
+     box-shadow: 0 6px 26px rgba(0,0,0,.3);
+}
+
+
+input[id="bg-btn-pink"]:checked ~ .topo .logo{
+    color: #fff;
+    font-family: 'Fpink';
+     
+}
