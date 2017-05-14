@@ -266,5 +266,9 @@ function matriz_rep(op){
         case "mult":
             return mat_Mult();
             break;
+            default :{
+                return "Pode ser implementado futuramente...";
+                break;
+            }
     }
 }
