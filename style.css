@@ -313,10 +313,11 @@ input[id="inversion"]:checked ~ .main{
 .animacoes {
     position: absolute;
     width: 100vw;
-    height: 30%;
+    height: 40%;
     bottom: 0;
     left: 0;
     z-index: 999;
+    padding: 0;
 }
 
 .animacoes p{
