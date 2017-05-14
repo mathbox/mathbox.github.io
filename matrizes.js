@@ -17,7 +17,7 @@ function matriz(){
         if(mat_veri()){
              //impr_mat();
             var opcao = op_selectors();
-            document.getElementById("resultado").innerHTML = "Soma: <br>" + matriz_rep(opcao);
+            document.getElementById("resultado").innerHTML = opcao + " <br>" + matriz_rep(opcao);
         }
         else
         {
@@ -214,7 +214,7 @@ function mat_Soma(){
 function mat_Sub(){
         this.m_resultado = "";
     for(var i = 0; i < getLineB(); i++){
-        this.m_resultado += "Linha " + (i + 1) + ": ";
+        //this.m_resultado += "Linha " + (i + 1) + ": ";
         for(var j = 0; j < getColB(); j++){
             this.m_resultado += "[ ";
             this.m_resultado += (matrizA[i][j] - matrizB[i][j]);
