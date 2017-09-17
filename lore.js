@@ -32,6 +32,13 @@ function responda(){
         return document.getElementById("resposta").innerHTML = myName();
     }
     
+    if(comando == "oãgara amil azzerdna"){
+         return document.getElementById("resposta").innerHTML = "Olá! Você gosta de histórias? <br>" + 
+             "Palavras de uma escritora... <br><br>" + getAutorMsg()
+            +"<br><br> oãgarA amiL azzerdnA:@Author";
+           
+    }
+    
     if(getNome() != undefined){
         if(seuNome(comando)){
             return document.getElementById("resposta").innerHTML = "Seu nome :P";
