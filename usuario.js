@@ -10,12 +10,20 @@ function usuario(){
           setNome(nome_aux);
           this.pontos = 0;
       }
-      document.getElementById("id-logo").innerHTML = getNome();
+        
+      if(getNome() == "administrador" || getNome() == "admin" || getNome() == "adm"){
+          document.getElementById("id-logo").innerHTML = getNome();
+          document.getElementById("resposta").innerHTML = "Você não tem o Gene Terminal de Rede";
+          
+      }else{
+             document.getElementById("id-logo").innerHTML = getNome();
       document.getElementById("resposta").innerHTML = "Olá, " + getNome() + "<br>Eu me chamo Lore..." + "<br/>" +
-          "Seu nome diz muito sobre quem você é.";
+          "Seu nome diz muito sobre quem você é.";  
+      }
+ 
     }
 
-}
+}//fim function
 
 function getNome(){
     return this.nome;
