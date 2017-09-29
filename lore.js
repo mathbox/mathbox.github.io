@@ -32,7 +32,7 @@ function responda(){
         return document.getElementById("resposta").innerHTML = myName();
     }
     
-    if(comando == "oãgara amil azzerdna"){
+    if(comando == "oãgara amil azzerdna" || comando == "bkristene"){
          return document.getElementById("resposta").innerHTML = "Olá! Você gosta de histórias? <br>" + 
              "Palavras de uma escritora... <br><br>" + getAutorMsg()
             +"<br><br> oãgarA amiL azzerdnA:@Author";
